@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Garten- & Landschaftsbau Weber · Sinzig</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Manrope:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pagebg: "#0c1216", // (Hintergrund)
+              cardbg: "#131d23", // (Karten)
+              accent: "#7da07f",
+              accentblue: "#4a7c9b", // (Sekundaer)
+              textlight: "#eef1ed", // (Text)
+              textmuted: "#8a9b92", // (Nebentexte)
+            },
+            fontFamily: {
+              sans: ["Manrope", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-pagebg text-textlight antialiased overflow-x-hidden selection:bg-accent selection:text-pagebg"
+  >
+    <header class="fixed w-full z-50 transition-all duration-500" id="navbar">
+      <div
+        class="absolute inset-0 bg-pagebg/80 backdrop-blur-md border-b border-white/5"
+      ></div>
+      <div
+        class="relative max-w-7xl mx-auto px-6 h-24 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3 group">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7ZswKs0yShn4fPjAE4TiMCaBOA1kq1.png"
+            alt="Weber GmbH Logo"
+            class="h-14 w-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="hidden sm:block">
+            <div
+              class="text-2xl font-serif text-white tracking-tight font-medium leading-none"
+            >
+              Teich und Garten Weber GmbH<span class="text-accent">.</span>
+            </div>
+            <div
+              class="text-[10px] uppercase tracking-[0.2em] text-textmuted mt-0.5"
+            >
+              Teich & Garten
+            </div>
+          </div>
+        </a>
+
+        <nav
+          class="hidden md:flex gap-12 text-sm font-semibold tracking-wide uppercase text-textlight/90"
+        >
+          <a
+            href="#leistungen"
+            class="hover:text-accent transition-colors relative group"
+          >
+            Leistungen
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#galerie"
+            class="hover:text-accent transition-colors relative group"
+          >
+            Galerie
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#ueberuns"
+            class="hover:text-accent transition-colors relative group"
+          >
+            Über uns
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <a
+          href="#kontakt"
+          class="hidden md:inline-flex px-8 py-3 bg-accent text-pagebg rounded-full text-sm font-bold tracking-wide hover:bg-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-accent/10"
+        >
+          Anfrage
+        </a>
+      </div>
+    </header>
+
+    <section
+      class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl animate-pulse-slow -z-10"
+      ></div>
+      <div
+        class="absolute bottom-20 left-10 w-[400px] h-[400px] bg-accentblue/5 rounded-full blur-3xl animate-pulse-slow -z-10"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center"
+      >
+        <div class="reveal z-10">
+          <span
+            class="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-4 block"
+            >Seit 1998 in Sinzig</span
+          >
+          <h1
+            class="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-8"
+          >
+            <span class="text-accentblue">Wasser</span> &amp; <br />
+            <span class="italic font-light text-accent">Natur.</span>
+          </h1>
+          <p
+            class="text-lg md:text-xl text-textmuted max-w-lg mb-12 leading-relaxed"
+          >
+            Wir planen und realisieren Gärten, die nicht nur beeindrucken,
+            sondern berühren. Ihr Anspruch ist unser Maßstab.
+          </p>
+          <div class="flex flex-wrap gap-6">
+            <a
+              href="#kontakt"
+              class="px-10 py-4 bg-accent text-pagebg rounded-full font-bold hover:shadow-2xl hover:bg-white transition-all duration-300"
+            >
+              Projekt starten
+            </a>
+            <a
+              href="#galerie"
+              class="group flex items-center gap-3 px-6 py-4 text-white font-bold transition-all hover:text-accent"
+            >
+              <span>Galerie ansehen</span>
+              <span class="group-hover:translate-x-2 transition-transform"
+                >→</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 reveal delay-200">
+          <div class="space-y-6 mt-12 md:mt-0">
+            <img
+              class="w-full h-64 md:h-80 object-cover rounded-[2rem] shadow-2xl shadow-black/30 animate-float"
+              src="https://images.unsplash.com/photo-1558293842-c0fd3db86157?auto=format&fit=crop&w=600&q=80"
+              alt="Garten Design"
+            />
+          </div>
+          <div class="space-y-6">
+            <img
+              class="w-full h-64 md:h-80 object-cover rounded-[2rem] shadow-2xl shadow-black/30 animate-float-delayed"
+              src="https://images.unsplash.com/photo-1584479898061-15742e14f50d?auto=format&fit=crop&w=600&q=80"
+              alt="Teichanlage"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="py-32 relative z-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-20 reveal"
+        >
+          <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">
+            Unsere <br /><span class="italic text-accent">Expertise</span
+            ><span class="text-accentblue italic">.</span>
+          </h2>
+          <p class="text-textmuted max-w-sm mt-6 md:mt-0 text-right">
+            Von der Vision bis zur Pflege – <br />alles aus einer Meisterhand.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="service-card group relative p-10 rounded-[2.5rem] bg-cardbg overflow-hidden reveal border border-white/5"
+          >
+            <div
+              class="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-10 text-accent"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl text-white font-serif mb-4">
+                Gartenarchitektur
+              </h3>
+              <p class="text-textmuted leading-relaxed text-sm">
+                Individuelle Planung und Konzeption. Wir denken in Räumen,
+                Achsen und Sichtbeziehungen.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="service-card group relative p-10 rounded-[2.5rem] bg-cardbg overflow-hidden reveal delay-100 border border-white/5"
+          >
+            <div
+              class="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-10 text-accent"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl text-white font-serif mb-4">
+                Stein & Pflaster
+              </h3>
+              <p class="text-textmuted leading-relaxed text-sm">
+                Natursteinverlegung in Perfektion. Wege, Terrassen und Mauern
+                für die Ewigkeit.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="service-card group relative p-10 rounded-[2.5rem] bg-cardbg overflow-hidden reveal delay-200 border border-white/5"
+          >
+            <div
+              class="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-10 text-accent"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl text-white font-serif mb-4">Vegetation</h3>
+              <p class="text-textmuted leading-relaxed text-sm">
+                Hochwertige Bepflanzung und Pflege. Wir bringen Leben und Farbe
+                in Ihren Garten.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="service-card group relative p-10 rounded-[2.5rem] bg-cardbg overflow-hidden reveal delay-300 border border-white/5"
+          >
+            <div
+              class="absolute inset-0 bg-accentblue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-10 text-accentblue"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 3c-1.5 4.5-6 7-6 11a6 6 0 0012 0c0-4-4.5-6.5-6-11z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl text-white font-serif mb-4">Teichbau</h3>
+              <p class="text-textmuted leading-relaxed text-sm">
+                Naturnahe Teichanlagen und Wasserlaeufe. Von Koi-Teichen bis
+                Schwimmteichen -- Wasser ist unsere Leidenschaft.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie" class="py-32 overflow-hidden relative z-10">
+      <div class="mb-16 text-center reveal">
+        <h2 class="font-serif text-4xl text-white">Ausgewählte Projekte</h2>
+      </div>
+
+      <div class="gallery-wrapper relative w-full">
+        <div
+          class="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-pagebg to-transparent z-10"
+        ></div>
+        <div
+          class="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-pagebg to-transparent z-10"
+        ></div>
+
+        <div id="gallerySlider" class="flex gap-8 w-max">
+          <img
+            class="h-[400px] w-[300px] md:w-[500px] object-cover rounded-2xl shadow-xl shadow-black/20 gallery-img transition-all duration-500 hover:scale-[1.02]"
+            src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=800&q=80"
+          />
+          <img
+            class="h-[400px] w-[300px] md:w-[500px] object-cover rounded-2xl shadow-xl shadow-black/20 gallery-img transition-all duration-500 hover:scale-[1.02]"
+            src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80"
+          />
+          <img
+            class="h-[400px] w-[300px] md:w-[500px] object-cover rounded-2xl shadow-xl shadow-black/20 gallery-img transition-all duration-500 hover:scale-[1.02]"
+            src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?auto=format&fit=crop&w=800&q=80"
+          />
+          <img
+            class="h-[400px] w-[300px] md:w-[500px] object-cover rounded-2xl shadow-xl shadow-black/20 gallery-img transition-all duration-500 hover:scale-[1.02]"
+            src="https://images.unsplash.com/photo-1621511214049-d7796d8591a3?auto=format&fit=crop&w=800&q=80"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="ueberuns" class="py-32 relative z-10">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center"
+      >
+        <div class="reveal">
+          <span
+            class="text-accent font-bold tracking-widest uppercase text-sm mb-4 block"
+            >Das Team</span
+          >
+          <h2 class="font-serif text-4xl md:text-5xl text-white mb-8">
+            Handwerk mit <br /><span class="italic text-accent"
+              >Leidenschaft.</span
+            >
+          </h2>
+          <p class="text-textmuted text-lg leading-relaxed mb-6">
+            Als traditionsbewusster Meisterbetrieb in Sinzig verbinden wir seit
+            über 25 Jahren fundiertes Fachwissen mit kreativer Gestaltungskraft.
+          </p>
+          <p class="text-textmuted text-lg leading-relaxed mb-10">
+            Unser Anspruch ist es, nicht einfach nur Gärten zu bauen, sondern
+            Lebensräume zu schaffen, die Ihren Charakter widerspiegeln und über
+            Generationen Bestand haben. Wir setzen auf Nachhaltigkeit, regionale
+            Materialien und ehrliche Beratung.
+          </p>
+          <div class="flex gap-2">
+            <div class="h-1 w-12 bg-accentblue rounded-full"></div>
+            <div class="h-1 w-12 bg-accent rounded-full"></div>
+          </div>
+        </div>
+        <div
+          class="relative reveal delay-200 h-[500px] rounded-[3rem] overflow-hidden shadow-2xl shadow-black/40"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1542601902044-1412d6e270e3?auto=format&fit=crop&w=800&q=80"
+            alt="Team bei der Arbeit"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-pagebg/80 to-transparent"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="py-32 relative overflow-hidden z-10">
+      <div
+        class="absolute -top-40 -right-40 w-[600px] h-[600px] border border-white/5 rounded-full opacity-50"
+      ></div>
+      <div
+        class="absolute -bottom-40 -left-40 w-[600px] h-[600px] border border-white/5 rounded-full opacity-50"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 relative z-10"
+      >
+        <div class="reveal">
+          <h2 class="font-serif text-4xl md:text-5xl mb-8 text-white">
+            Kontaktieren <br />Sie uns.
+          </h2>
+          <p class="text-textmuted text-lg mb-10 leading-relaxed">
+            Wir laden Sie herzlich zu einem unverbindlichen Beratungsgespräch
+            ein. Lassen Sie uns gemeinsam herausfinden, wie wir Ihre
+            Vorstellungen verwirklichen können.
+          </p>
+          <div class="space-y-4 text-lg text-textlight">
+            <p class="flex items-center gap-4">
+              <span class="w-12 h-[1px] bg-accent"></span> Weber GmbH -- Teich &
+              Garten
+            </p>
+            <p class="flex items-center gap-4">
+              <span class="w-12 h-[1px] bg-accentblue"></span> Sinzig,
+              Rheinland-Pfalz
+            </p>
+            <p class="flex items-center gap-4">
+              <span class="w-12 h-[1px] bg-accent"></span> info@weber-galabau.de
+            </p>
+          </div>
+        </div>
+
+        <form class="space-y-6 reveal delay-200">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              class="w-full bg-white/5 border border-white/10 rounded-xl p-5 text-white placeholder-textmuted/50 focus:border-accent focus:bg-white/10 transition outline-none"
+              placeholder="Ihr Name"
+            />
+            <input
+              class="w-full bg-white/5 border border-white/10 rounded-xl p-5 text-white placeholder-textmuted/50 focus:border-accent focus:bg-white/10 transition outline-none"
+              placeholder="Ihre Telefonnummer"
+            />
+          </div>
+          <input
+            class="w-full bg-white/5 border border-white/10 rounded-xl p-5 text-white placeholder-textmuted/50 focus:border-accent focus:bg-white/10 transition outline-none"
+            placeholder="Ihre E-Mail Adresse"
+          />
+          <textarea
+            rows="4"
+            class="w-full bg-white/5 border border-white/10 rounded-xl p-5 text-white placeholder-textmuted/50 focus:border-accent focus:bg-white/10 transition outline-none"
+            placeholder="Worum geht es bei Ihrem Projekt?"
+          ></textarea>
+
+          <button
+            class="w-full py-5 rounded-xl bg-accent text-pagebg font-bold hover:bg-white hover:scale-[1.01] transition-all duration-300 shadow-lg shadow-accent/10"
+          >
+            Kostenlose Beratung anfordern
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="py-10 bg-pagebg border-t border-white/5 text-center text-textmuted text-sm relative z-10"
+    >
+      <p>
+        &copy; 2026 Teich und Garten Weber GmbH &middot; Meisterbetrieb in
+        Sinzig
+      </p>
+    </footer>
+
+    <div
+      id="lightboxOverlay"
+      class="fixed inset-0 hidden items-center justify-center z-[100] bg-pagebg/95 backdrop-blur-xl transition-all duration-500"
+    >
+      <img
+        id="lightboxImage"
+        class="max-w-[90vw] max-h-[85vh] rounded-2xl shadow-2xl scale-95 transition-transform duration-300 border border-white/10"
+      />
+      <button
+        id="closeLightbox"
+        class="absolute top-8 right-8 text-white text-4xl hover:text-accent transition"
+      >
+        &times;
+      </button>
+    </div>
+
+    <button
+      id="scrollToTop"
+      aria-label="Nach oben scrollen"
+      class="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-accentblue text-white flex items-center justify-center shadow-lg shadow-accentblue/20 opacity-0 pointer-events-none translate-y-4 transition-all duration-500 hover:bg-accent hover:text-pagebg hover:shadow-2xl hover:-translate-y-1 hover:scale-110 cursor-pointer"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

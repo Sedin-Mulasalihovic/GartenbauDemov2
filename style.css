@@ -1,0 +1,122 @@
+/* --- Global Smoothness --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Feine Körnung, jetzt auf dunklem Grund. Opacity reduziert für edleren Look. */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJz48ZmlsdGVyIGlkPSdub2lzZSc+PHBmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScwLjgnIG51bU9jdGF2ZXM9JzMnIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjbm9pc2UpJyBvcGFjaXR5PScwLjAxNScvPjwvc3ZnPg==");
+}
+
+/* --- Smooth Reveal Logic --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Service Cards (Dunkel auf Dunkel) --- */
+.service-card {
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.6s ease,
+    border-color 0.6s ease;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  border-color: rgba(125, 160, 127, 0.3); /* Salbeigruen-Akzent beim Hover */
+}
+
+.service-card:last-child:hover {
+  border-color: rgba(
+    74,
+    124,
+    155,
+    0.3
+  ); /* Stahlblau-Akzent fuer Teichbau-Karte */
+}
+
+/* --- Infinite Slider Animation --- */
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scrollInfinite 50s linear infinite;
+}
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* --- Hero Animations --- */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite -4s;
+}
+
+@keyframes pulseSlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+.animate-pulse-slow {
+  animation: pulseSlow 10s ease-in-out infinite;
+}
+
+/* Lightbox Animation */
+#lightboxOverlay.flex img {
+  transform: scale(1);
+}
+
+/* --- Scroll to Top Button --- */
+#scrollToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#scrollToTop:active {
+  transform: scale(0.92);
+}
+
+@keyframes bounceUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+#scrollToTop.visible:not(:hover) svg {
+  animation: bounceUp 2s ease-in-out infinite;
+}
